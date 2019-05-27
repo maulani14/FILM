@@ -1,4 +1,4 @@
- package com.maulani14.reviwfilm;
+ package com.maulani14.reviwfilm.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

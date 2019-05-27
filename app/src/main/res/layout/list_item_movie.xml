@@ -9,6 +9,7 @@
     android:padding="16dp"
     android:background="#ADDCF1">
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -25,6 +26,7 @@
             android:layout_height="wrap_content"
             android:paddingRight="16dp"
             android:textStyle="bold"
+            android:text="Text1"
             android:textColor="#242222"
             android:textSize="16sp" />
         <TextView
@@ -32,12 +34,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingRight="16dp"
+            android:text="Text2"
             android:textColor="#F79898" />
         <TextView
             android:id="@+id/sutradara"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxLines="3"
+            android:text="Text3"
             android:paddingRight="16dp"
             android:textColor="#F1A7A7" />
     </LinearLayout>
