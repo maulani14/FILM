@@ -2,11 +2,12 @@ package com.maulani14.reviwfilm;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
 import com.maulani14.reviwfilm.model.MovieResponse;
+import com.maulani14.reviwfilm.res.MovieApiService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,8 +18,8 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
-    public List<Movie> movies = new ArrayList<Movie> ();
-    private BaseApiService mApiService;
+    public List<MovieResponse> movies = new ArrayList<MovieResponse> ();
+    private MovieApiService mApiService;
     private RecyclerView rvView;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         rvView = (RecyclerView) findViewById(R.id.recycler_view);
         rvView.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager(MainActivity.this);
+        layoutManager = new LinearLayoutManager (MainActivity.this);
         rvView.setLayoutManager(layoutManager);
 
         mApiService = UtilsAPI.getApiService();
