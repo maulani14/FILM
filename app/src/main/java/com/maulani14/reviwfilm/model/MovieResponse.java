@@ -11,27 +11,21 @@ public class MovieResponse {
     @SerializedName("createdAt")
     @Expose
     private String createdAt;
-    @SerializedName("Judul")
+    @SerializedName("name")
     @Expose
-    private String judul;
-    @SerializedName("Studio")
-    @Expose
-    private String studio;
-    @SerializedName("Pendapatan")
-    @Expose
-    private Integer pendapatan;
-    @SerializedName("Sutradara")
-    @Expose
-    private String sutradara;
-    @SerializedName("Tahun")
-    @Expose
-    private Integer tahun;
-    @SerializedName("Poster")
+    private String name;
+    @SerializedName("poster")
     @Expose
     private String poster;
-    @SerializedName("Actors")
+    @SerializedName("tahun")
     @Expose
-    private String actors;
+    private String tahun;
+    @SerializedName("sutradara")
+    @Expose
+    private String sutradara;
+    @SerializedName("produser")
+    @Expose
+    private String produser;
 
     public String getId() {
         return id;
@@ -49,44 +43,12 @@ public class MovieResponse {
         this.createdAt = createdAt;
     }
 
-    public String getJudul() {
-        return judul;
+    public String getName() {
+        return name;
     }
 
-    public void setJudul(String judul) {
-        this.judul = judul;
-    }
-
-    public String getStudio() {
-        return studio;
-    }
-
-    public void setStudio(String studio) {
-        this.studio = studio;
-    }
-
-    public Integer getPendapatan() {
-        return pendapatan;
-    }
-
-    public void setPendapatan(Integer pendapatan) {
-        this.pendapatan = pendapatan;
-    }
-
-    public String getSutradara() {
-        return sutradara;
-    }
-
-    public void setSutradara(String sutradara) {
-        this.sutradara = sutradara;
-    }
-
-    public Integer getTahun() {
-        return tahun;
-    }
-
-    public void setTahun(Integer tahun) {
-        this.tahun = tahun;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getPoster() {
@@ -97,12 +59,29 @@ public class MovieResponse {
         this.poster = poster;
     }
 
-    public String getActors() {
-        return actors;
+    public String getTahun() {
+        return tahun;
     }
 
-    public void setActors(String actors) {
-        this.actors = actors;
+    public void setTahun(String tahun) {
+        this.tahun = tahun;
     }
+
+    public String getSutradara() {
+        return sutradara;
+    }
+
+    public void setSutradara(String sutradara) {
+        this.sutradara = sutradara;
+    }
+
+    public String getProduser() {
+        return produser;
+    }
+
+    public void setProduser(String produser) {
+        this.produser = produser;
+    }
+
 
 }

@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import com.maulani14.reviwfilm.model.MovieResponse;
 import com.maulani14.reviwfilm.res.MovieApiService;
+import com.maulani14.reviwfilm.service.API;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +19,7 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
-    public List<MovieResponse> movies = new ArrayList<MovieResponse> ();
+    public List<MovieResponse> movies = new ArrayList<MovieResponse>();
     private MovieApiService mApiService;
     private RecyclerView rvView;
     private RecyclerView.Adapter adapter;
@@ -31,25 +32,25 @@ public class MainActivity extends AppCompatActivity {
 
         rvView = (RecyclerView) findViewById(R.id.recycler_view);
         rvView.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager (MainActivity.this);
+        layoutManager = new LinearLayoutManager(MainActivity.this);
         rvView.setLayoutManager(layoutManager);
 
-        mApiService = UtilsAPI.getApiService();
+        mApiService = API.getApiService();
         movies.clear();
-        mApiService.readData().enqueue(new Callback<List<MovieResponse>> () {
+        mApiService.readData().enqueue(new Callback<List<MovieResponse>>() {
             @Override
-            public void onResponse( Call<List<MovieResponse>> call, Response<List<MovieResponse>> response) {
+            public void onResponse(Call<List<MovieResponse>> call, Response<List<MovieResponse>> response) {
                 Toast.makeText(MainActivity.this, "Berhasil memproses data dari APi", Toast.LENGTH_SHORT).show();
                 for (int i = 0; i <response.body().size() ; i++) {
                     MovieResponse mv = new MovieResponse();
                     mv.setPoster(response.body().get(i).getPoster());
-                    mv.setName(response.body().get(i).getName());
+                    mv.setName (response.body().get(i).getName ());
                     mv.setTahun(response.body().get(i).getTahun());
                     mv.setSutradara(response.body().get(i).getSutradara());
                     movies.add(mv);
                 }
 
-                adapter = new MovieAdapter(movies,getApplicationContext());
+                adapter = new MovieAdapter (movies,getApplicationContext());
                 rvView.setAdapter(adapter);
             }
 

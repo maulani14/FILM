@@ -1,30 +1,18 @@
 package com.maulani14.reviwfilm.service;
 
 
-import com.maulani14.reviwfilm.ServiceGenerator;
-import com.maulani14.reviwfilm.model.MovieResponse;
+import com.maulani14.reviwfilm.RetrofitClient;
+import com.maulani14.reviwfilm.res.MovieApiService;
 
-import okhttp3.OkHttpClient;
-import retrofit2.Call;
 import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.http.GET;
-import retrofit2.http.Query;
 
 public class API {
     private static Retrofit retrofit = null;
 
-    public static Retrofit getClientEvent() {
-        OkHttpClient okHttpClient = new OkHttpClient.Builder().build();
+    public static final String BASE_ROOT_URL = "https://5ce36e02e7bf4100144c64c4.mockapi.io/";
 
-        if (retrofit == null) {
-            retrofit = new Retrofit.Builder()
-                    .baseUrl( ServiceGenerator.BASE_URL)
-                    .client(okHttpClient)
-                    .addConverterFactory( GsonConverterFactory.create())
-                    .build();
-        }
-        return retrofit;
+    public static MovieApiService getApiService() {
+        return RetrofitClient.getClient(BASE_ROOT_URL).create(MovieApiService.class);
     }
 
 }
