@@ -44,9 +44,10 @@ public class MainActivity extends AppCompatActivity {
                 for (int i = 0; i <response.body().size() ; i++) {
                     MovieResponse mv = new MovieResponse();
                     mv.setPoster(response.body().get(i).getPoster());
-                    mv.setName (response.body().get(i).getName ());
-                    mv.setTahun(response.body().get(i).getTahun());
-                    mv.setSutradara(response.body().get(i).getSutradara());
+                    mv.setJudul ("Judul : "+(response.body().get(i).getJudul ()));
+                    mv.setActors ("Aktor : "+(response.body().get(i).getActors ()));
+                    mv.setSutradara ("Sutradara : "+(response.body().get(i).getSutradara()));
+                    mv.setTahun ("Tahun Terbit : "+(response.body().get(i).getTahun ()));
                     movies.add(mv);
                 }
 

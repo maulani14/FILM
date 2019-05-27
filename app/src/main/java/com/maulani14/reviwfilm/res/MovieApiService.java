@@ -8,6 +8,6 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface MovieApiService {
-    @GET("/film")
+    @GET("/TopBoxOffice")
     Call<List<MovieResponse>> readData();
 }

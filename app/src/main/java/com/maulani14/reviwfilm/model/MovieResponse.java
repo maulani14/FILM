@@ -11,21 +11,27 @@ public class MovieResponse {
     @SerializedName("createdAt")
     @Expose
     private String createdAt;
-    @SerializedName("name")
+    @SerializedName("Judul")
     @Expose
-    private String name;
-    @SerializedName("poster")
+    private String judul;
+    @SerializedName("Studio")
     @Expose
-    private String poster;
-    @SerializedName("tahun")
+    private String studio;
+    @SerializedName("Pendapatan")
     @Expose
-    private String tahun;
-    @SerializedName("sutradara")
+    private Integer pendapatan;
+    @SerializedName("Sutradara")
     @Expose
     private String sutradara;
-    @SerializedName("produser")
+    @SerializedName("Tahun")
     @Expose
-    private String produser;
+    private String tahun;
+    @SerializedName("Poster")
+    @Expose
+    private String poster;
+    @SerializedName("Actors")
+    @Expose
+    private String actors;
 
     public String getId() {
         return id;
@@ -43,28 +49,28 @@ public class MovieResponse {
         this.createdAt = createdAt;
     }
 
-    public String getName() {
-        return name;
+    public String getJudul() {
+        return judul;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setJudul(String judul) {
+        this.judul = judul;
     }
 
-    public String getPoster() {
-        return poster;
+    public String getStudio() {
+        return studio;
     }
 
-    public void setPoster(String poster) {
-        this.poster = poster;
+    public void setStudio(String studio) {
+        this.studio = studio;
     }
 
-    public String getTahun() {
-        return tahun;
+    public Integer getPendapatan() {
+        return pendapatan;
     }
 
-    public void setTahun(String tahun) {
-        this.tahun = tahun;
+    public void setPendapatan(Integer pendapatan) {
+        this.pendapatan = pendapatan;
     }
 
     public String getSutradara() {
@@ -75,13 +81,28 @@ public class MovieResponse {
         this.sutradara = sutradara;
     }
 
-    public String getProduser() {
-        return produser;
+    public String getTahun() {
+        return tahun;
     }
 
-    public void setProduser(String produser) {
-        this.produser = produser;
+    public void setTahun(String tahun) {
+        this.tahun = tahun;
     }
 
+    public String getPoster() {
+        return poster;
+    }
+
+    public void setPoster(String poster) {
+        this.poster = poster;
+    }
+
+    public String getActors() {
+        return actors;
+    }
+
+    public void setActors(String actors) {
+        this.actors = actors;
+    }
 
 }

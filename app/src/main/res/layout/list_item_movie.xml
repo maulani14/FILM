@@ -7,42 +7,71 @@
     android:minHeight="72dp"
     android:orientation="horizontal"
     android:padding="16dp">
+
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2"
+        android:layout_width="153dp"
+        android:layout_height="93dp"
         android:layout_weight="1"
         android:background="#ADDCF1"
         android:orientation="vertical">
+
         <ImageView
             android:id="@+id/movie_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_gravity="top"
-            android:paddingRight="16dp"/>
+            android:paddingRight="16dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="289dp"
+        android:layout_height="96dp"
+        android:layout_weight="1"
+        android:background="#ADDCF1"
+        android:orientation="vertical">
+
+        <!--<ImageView-->
+        <!--android:id="@+id/movie_image"-->
+        <!--android:layout_width="77dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:layout_gravity="top"-->
+        <!--android:paddingRight="16dp" />-->
+
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingRight="16dp"
-            android:textStyle="bold"
             android:text="Text1"
             android:textColor="#242222"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
         <TextView
-            android:id="@+id/date"
+            android:id="@+id/aktor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingRight="16dp"
             android:text="Text2"
             android:textColor="#F79898" />
+
         <TextView
             android:id="@+id/sutradara"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxLines="3"
-            android:text="Text3"
             android:paddingRight="16dp"
+            android:text="Text3"
             android:textColor="#F1A7A7" />
+
+        <TextView
+            android:id="@+id/tahun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            android:paddingRight="16dp"
+            android:text="Text3"
+            android:textColor="#3C57EC" />
     </LinearLayout>
 </LinearLayout>

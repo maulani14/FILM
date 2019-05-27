@@ -31,14 +31,15 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public ImageView movie_image;
-        public TextView title,date,sutradara;
+        public TextView title,aktor,sutradara,tahun;
 
         public ViewHolder( View v) {
             super(v);
             movie_image = v.findViewById(R.id.movie_image);
             title = v.findViewById(R.id.title);
-            date = v.findViewById(R.id.date);
+            aktor = v.findViewById(R.id.aktor);
             sutradara= v.findViewById(R.id.sutradara);
+            tahun= v.findViewById(R.id.tahun);
         }
     }
 
@@ -55,9 +56,10 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
                 .load(rvData.get(position).getPoster())
                 .diskCacheStrategy( DiskCacheStrategy.ALL)
                 .into(holder.movie_image);
-        holder.title.setText(rvData.get(position).getName ());
-        holder.date.setText(rvData.get(position).getTahun());
+        holder.title.setText(rvData.get(position).getJudul ());
+        holder.aktor.setText(rvData.get(position).getActors ());
         holder.sutradara.setText(rvData.get(position).getSutradara());
+        holder.tahun.setText(rvData.get(position).getTahun ());
     }
 
     @Override
